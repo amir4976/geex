@@ -64,7 +64,7 @@ geex-dashboard/
 You can simply clone and open the HTML file in your browser:
 
 ```bash
-git clone https://github.com/your-username/geex-dashboard.git
+git clone https://github.com/amir4976/geex
 cd geex-dashboard
 open index-4.html
 ```
