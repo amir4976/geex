@@ -1,14 +1,20 @@
-<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/d60e3bc3-eb41-4287-bbdf-efbd6ba02c13" /># 🚀 Geex Admin Dashboard – Template Version: index-4
+ <p align="center">
+<img width="500" height="500"  alt="image" src="https://github.com/amir4976/geex/blob/master/public/assets/logo-dark.svg" />
+
+</p>
+
+
+# 🚀 Geex Admin Dashboard – Template Version: index-4
 
 A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
-![Geex Dashboard Preview](https://geex.kinodesign.ir/template/assets/images/dashboard-preview.jpg)
+![Geex Dashboard Preview](https://github.com/amir4976/geex/blob/master/public/assets/02.webp)
 
 ---
 
 ## 🌐 Demo
 
-🔗 **Live Preview:** [Click to View Template](https://geex.kinodesign.ir/template/index-4.html)
+🔗 **Live Preview:** soon
 
 ---
 
@@ -60,7 +66,7 @@ geex-dashboard/
 You can simply clone and open the HTML file in your browser:
 
 ```bash
-git clone https://github.com/your-username/geex-dashboard.git
+git clone https://github.com/amir4976/geex
 cd geex-dashboard
 open index-4.html
 ```
