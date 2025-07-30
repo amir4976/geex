@@ -6,7 +6,7 @@
 
 A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
-![Geex Dashboard Preview](https://geex.kinodesign.ir/template/assets/images/dashboard-preview.jpg)
+![Geex Dashboard Preview](https://github.com/amir4976/geex/blob/master/public/assets/02.webp)
 
 ---
 
