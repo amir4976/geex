@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Geex Admin Dashboard – Template Version: index-4
 
-## Getting Started
+A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
-First, run the development server:
+![Geex Dashboard Preview](https://geex.kinodesign.ir/template/assets/images/dashboard-preview.jpg)
+
+---
+
+## 🌐 Demo
+
+🔗 **Live Preview:** [Click to View Template](https://geex.kinodesign.ir/template/index-4.html)
+
+---
+
+<!-- ## 📁 Project Structure
+ -->
+
+---
+
+## ✨ Features
+
+- ✅ Fully responsive design
+- 🌙 Light and dark mode
+- 🔄 RTL support included
+- 📊 Integrated with charts, inbox, calendar, etc.
+- 🎨 Modern and clean UI elements
+- 🧱 Built with Bootstrap 5
+- 🛠 Developer-friendly code
+- 📁 30+ ready-to-use pages
+
+---
+
+## 🧰 Technologies Used
+
+- HTML5 / CSS3
+- JavaScript (Vanilla + jQuery)
+- Bootstrap 5.x
+- ApexCharts / Chart.js
+- Feather Icons, FontAwesome
+
+---
+
+## ⚙️ Getting Started
+
+You can simply clone and open the HTML file in your browser:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/geex-dashboard.git
+cd geex-dashboard
+open index-4.html
+
+
+🧩 Pages Included
+Dashboard
+
+Calendar
+
+Inbox / Mailbox
+
+User Profile
+
+Login / Register / Forgot Password
+
+Tables (basic / data tables)
+
+Forms (elements / validation / wizard)
+
+UI Elements (buttons, alerts, modals, etc.)
+
+Charts (ApexCharts, Chart.js)
+
+Icons (Feather, FontAwesome)
+
+Error Pages (404, 500)
+
+And more...
+
+🧠 Customization Guide
+Modify the main layout in index-4.html.
+
+Add or remove plugins from the /plugins/ directory.
+
+Customize styles via css/style.css or add a custom file.
+
+Toggle dark/light modes with body classes or JS toggle switch.
+
+Structure your backend (Node, Laravel, Django, etc.) and inject parts of this template as views or components.
+
+📜 License
+This project is based on a commercial template. If you obtained it from a legal source (e.g., ThemeForest, Envato), make sure you follow the licensing terms included with the original download.
+
+🔒 This repository is for personal/non-commercial usage unless licensed.
+
+🙌 Credits
+UI Design: Peterdraw / KinoDesign
+
+Assets & Frameworks:
+
+Bootstrap 5
+
+ApexCharts
+
+Chart.js
+
+Feather Icons
+
+FontAwesome
+
+📬 Support
+If you need help or have suggestions, feel free to:
+
+Open an issue in this repo
+
+Contact the template author via the original purchase platform
+
+Made with ❤️ by Geex Team – Build something powerful.
+
+yaml
+Copy
+Edit
+
+---
+
+📌 اگر خواستی نسخه فارسی یا همراه با دستورالعمل برای فریم‌ورک خاصی (مثل Node.js یا Laravel یا حتی CakePHP) برات بنویسم، کافیه بگی.
+
+
+
+
+
+
+
+
+Ask ChatGPT
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
