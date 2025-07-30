@@ -44,10 +44,6 @@ A modern, responsive, and feature-rich admin dashboard template built with HTML5
 
 You can simply clone and open the HTML file in your browser:
 
-```bash
-git clone https://github.com/your-username/geex-dashboard.git
-cd geex-dashboard
-open index-4.html
 
 
 🧩 Pages Included
