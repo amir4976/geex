@@ -12,7 +12,7 @@ A modern, responsive, and feature-rich admin dashboard template built with HTML5
 
 ## 🌐 Demo
 
-🔗 **Live Preview:** [Click to View Template](https://geex.kinodesign.ir/template/index-4.html)
+🔗 **Live Preview:** soon
 
 ---
 
