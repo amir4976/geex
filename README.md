@@ -1,5 +1,7 @@
+HTML <p align="center">
 <img width="500" height="500"  alt="image" src="https://github.com/amir4976/geex/blob/master/public/assets/logo-dark.svg" />
 
+</p>
 
 
 # 🚀 Geex Admin Dashboard – Template Version: index-4
