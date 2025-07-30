@@ -1,4 +1,8 @@
-<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/d60e3bc3-eb41-4287-bbdf-efbd6ba02c13" /># 🚀 Geex Admin Dashboard – Template Version: index-4
+<img width="500" height="500"  alt="image" src="https://github.com/amir4976/geex/blob/master/public/assets/logo-dark.svg" />
+
+
+
+# 🚀 Geex Admin Dashboard – Template Version: index-4
 
 A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
