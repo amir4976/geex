@@ -1,7 +1,7 @@
 import { Message, Notification, SearchNormal } from "iconsax-reactjs";
 import Image from "next/image";
 import React from "react";
-
+ 
 function AccsessBtns() {
   return (
     <div className="flex gap-6 items-center">
