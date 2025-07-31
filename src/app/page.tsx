@@ -14,10 +14,14 @@ export default function Home() {
           </div>
           {/* end topbar */}
 
-
-          
+          <div className="flex gap-14">
+            <div className="flex-1 bg-red-500">ستون اول</div>
+            <div className="min-w-[400px] max-w-[400px]   bg-blue-500">
+              ستون دوم
+            </div>
+          </div>
         </div>
-      </MainLayout> 
+      </MainLayout>
     </>
   );
 }
