@@ -7,10 +7,15 @@ export default function Home() {
       <MainLayout>
         {/* محتوای اصلی که اسکرول می‌خوره */}
         <div className="w-full  border border-black h-screen   ">
+          {/* topbar */}
           <div className="flex justify-between items-center p-2 ">
-            <Title title="صورتحساب" desc="به داشبورد گیگسی خوش آمدید" />
-            <AccsessBtns/>
+            <Title title="صورتحساب" desc="به داشبورد  خوش آمدید" />
+            <AccsessBtns />
           </div>
+          {/* end topbar */}
+          
+
+          
         </div>
       </MainLayout>
     </>
