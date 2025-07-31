@@ -13,11 +13,11 @@ export default function Home() {
             <AccsessBtns />
           </div>
           {/* end topbar */}
-          
+
 
           
         </div>
-      </MainLayout>
+      </MainLayout> 
     </>
   );
 }
