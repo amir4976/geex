@@ -28,7 +28,7 @@ const StatCardWithLineChart: React.FC<Props> = ({
     },
     stroke: {
       curve: "smooth",
-      width: 2,
+      width: 3,
     },
     grid: { show: false },
     xaxis: {
@@ -50,9 +50,9 @@ const StatCardWithLineChart: React.FC<Props> = ({
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-3xl p-5 shadow-sm w-full">
+    <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-3xl p-5  w-full">
            {/* متن سمت راست */}
-      <div className="w-full md:w-2/3 flex flex-col  text-right mt-4 md:mt-0 gap-5">
+      <div className="w-full md:w-2/3 flex flex-col  text-right mt-4 md:mt-0 gap-8">
         <span className="text-lg text-gray-800">{title}</span>
         <span className="text-2xl font-bold">{value.toLocaleString("fa-IR")}</span>
         <span

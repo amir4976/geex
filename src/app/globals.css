@@ -34,6 +34,9 @@
   font-family: var(--font-peydaBold);
 }
 
+*{
+  font-family: var(--font-peydaMed);
+}
 
 body {
   background: var(--background);
@@ -44,15 +47,20 @@ body {
 
 .LayoutContainer{
   display: flex ;
+  gap: 20px;
   
 }
 .navWarper{
   display: flex;
-  width: 310px;
+  width: 320px;
 }
 .Elemntswarper{
   flex:1;
   display: flex;
   width: 100%;
   padding: 25px;
+}
+
+.apexcharts-canvas {
+  cursor: crosshair;
 }

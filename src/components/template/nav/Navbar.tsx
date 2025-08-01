@@ -11,7 +11,7 @@ import React from "react";
 function Navbar() {
   return (
     <div>
-      <div className="bg-white h-11/12 w-[300px]  rounded-4xl p-6 flex flex-col fixed top-7 right-3  gap-10  text-gray-500">
+      <div className="bg-white h-11/12 w-[300px]  rounded-4xl p-8 flex flex-col fixed top-7 right-3  gap-10  text-gray-500">
         <Image src="/assets/logo-dark.svg" alt="alt" width={180} height={180} />
 
         <nav className="flex h-full w-full">
