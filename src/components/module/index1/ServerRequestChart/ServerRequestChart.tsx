@@ -9,11 +9,10 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-// parse number to persion 
+// parse number to persion
 function toPersianDigits(num: string | number): string {
   return String(num).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[parseInt(d)]);
 }
-
 
 // get pyda font from client
 const getPeydaFont = () => {
@@ -24,14 +23,11 @@ const getPeydaFont = () => {
 };
 
 type props = {
-  chartData: number[],
-  chartDataSaccond: number[]
+  chartData: number[];
+  chartDataSaccond: number[];
 };
 
-
-const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
-
-  
+const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
   const [font, setFont] = useState("PeydaWeb-SemiBold");
 
   useEffect(() => {
@@ -41,6 +37,7 @@ const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
   const options: ApexOptions = {
     chart: {
       type: "line",
+      width: "100%",
       height: 350,
       zoom: { enabled: false },
       toolbar: { show: false },
@@ -49,7 +46,17 @@ const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
     grid: {
       show: false, // ← حذف گرید بک‌گراند
     },
-
+  title: {
+    text: 'درخواست های سرور',
+    floating: true,
+    offsetX: 0,
+    offsetY: 0,
+    align: "right",
+    style: {
+      fontSize: '19px',
+      fontWeight: 'bold',
+    }
+  },
     colors: ["#F9C200", "#00C9A7"],
     stroke: {
       curve: "smooth",
@@ -60,7 +67,7 @@ const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
     },
     series: [
       { name: "محصول 1", data: chartData },
-      { name: "محصول 2", data:chartDataSaccond },
+      { name: "محصول 2", data: chartDataSaccond },
     ],
     xaxis: {
       categories: [
@@ -90,7 +97,10 @@ const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
         formatter: (val: number): string => toPersianDigits(val),
       },
     },
-
+    legend: {
+      position: "top",
+      horizontalAlign: "left",
+    },
     tooltip: {
       custom: ({ series, seriesIndex, dataPointIndex, w }) => {
         const name = w.globals.seriesNames[seriesIndex];
@@ -104,9 +114,6 @@ const ServerRequestChart = ({chartData,chartDataSaccond}:props) => {
       },
     },
   };
-
-
-
 
   return (
     <div className="peydaSemi">

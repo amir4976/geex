@@ -64,3 +64,10 @@ body {
 .apexcharts-canvas {
   cursor: crosshair;
 }
+.apexcharts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* عنوان سمت چپ، لجند سمت راست */
+  gap: 10px; /* فاصله بینشون */
+  flex-wrap: nowrap; /* خطی بمونه */
+}
