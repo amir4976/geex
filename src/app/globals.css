@@ -36,6 +36,7 @@
 
 *{
   font-family: var(--font-peydaMed);
+
 }
 
 body {
@@ -43,18 +44,22 @@ body {
   color: black;
   font-family: var(--font-peydaReg), Arial, Helvetica, sans-serif;
   direction: rtl; 
+    padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
 }
 
-.LayoutContainer{
+.MainLayoutContainer{
   display: flex ;
   gap: 20px;
   
 }
-.navWarper{
+.SideBarNavContainer{
   display: flex;
   width: 320px;
 }
-.Elemntswarper{
+.MainElementContainer{
   flex:1;
   display: flex;
   width: 100%;
@@ -71,3 +76,9 @@ body {
   gap: 10px; /* فاصله بینشون */
   flex-wrap: nowrap; /* خطی بمونه */
 }
+
+
+
+
+
+

@@ -3,7 +3,7 @@ import React from "react";
 
 function StateCardContainer() {
   return (
-    <div className="flex-1  grid grid-cols-3 gap-10">
+    <div className="flex-1  grid grid-cols-1 gap-10 lg:grid-cols-3">
       <StatCardWithLineChart
         title="کاربران جدید"
         value={4750}
