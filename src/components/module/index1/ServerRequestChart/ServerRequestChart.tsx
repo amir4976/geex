@@ -27,6 +27,16 @@ type props = {
   chartDataSaccond: number[];
 };
 
+
+
+const randomArray = ()=>{
+  const myArray = [];
+  for (let i = 0; i < 7; i++) {
+    myArray.push(Math.floor(Math.random() * 100));
+  }
+  return myArray;
+}
+
 const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
   const [font, setFont] = useState("PeydaWeb-SemiBold");
 
@@ -46,17 +56,17 @@ const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
     grid: {
       show: false, // ← حذف گرید بک‌گراند
     },
-  title: {
-    text: 'درخواست های سرور',
-    floating: true,
-    offsetX: 0,
-    offsetY: 0,
-    align: "right",
-    style: {
-      fontSize: '19px',
-      fontWeight: 'bold',
-    }
-  },
+    title: {
+      text: "درخواست های سرور",
+      floating: true,
+      offsetX: 0,
+      offsetY: 0,
+      align: "right",
+      style: {
+        fontSize: "19px",
+        fontWeight: "bold",
+      },
+    },
     colors: ["#F9C200", "#00C9A7"],
     stroke: {
       curve: "smooth",
@@ -66,8 +76,8 @@ const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
       enabled: false,
     },
     series: [
-      { name: "محصول 1", data: chartData },
-      { name: "محصول 2", data: chartDataSaccond },
+      { name: "محصول 1", data: randomArray() },
+      { name: "محصول 2", data: randomArray()  },
     ],
     xaxis: {
       categories: [

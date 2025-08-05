@@ -5,6 +5,8 @@ import StateCardContainer from "@/components/template/index1/stateCardContainer/
 import Testimonial from "@/components/template/index1/testimonial/Testimonial";
 import TopBarContainer from "@/components/template/index1/topbarContainer/TopBarContainer";
 import MainLayout from "@/layout/MainLayout";
+import "./globals.css";
+import ColChart from "@/components/module/index1/ColChart/ColChart";
 
 export default function Home() {
   return (
@@ -42,7 +44,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="  col-span-2 bg-blue-500"></div>
+            <div className="  col-span-2 ">
+                <ColChart/>
+
+            </div>
           </div>
         </div>
       </MainLayout>

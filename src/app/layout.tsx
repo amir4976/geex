@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import Testimonial from "@/components/template/index1/testimonial/Testimonial";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -50,8 +49,6 @@ export default function RootLayout({
           antialiased`}
       >
         {children}
-
-
       </body>
     </html>
   );

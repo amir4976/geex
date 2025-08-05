@@ -15,10 +15,10 @@ import TestimonialCard from "@/components/module/index1/TestimonialCard/Testimon
 const Testimonial = () => {
   return (
     <>
-      <div className="w-full  p-6 overflow-hidden">
-        <div className="">
-          <p>نظرات کاربران</p>
-          <p>آنها در پرواز او موفق می شوند</p>
+      <div className="w-full  p-6 overflow-hidden ">
+        <div className="mb-10">
+          <p className="text-2xl">نظرات کاربران</p>
+          <p className="text-gray-500">آنها در پرواز او موفق می شوند</p>
         </div>
         <Swiper
           slidesPerView={3}
@@ -47,7 +47,6 @@ const Testimonial = () => {
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
-          className="mySwiper"
         >
           <SwiperSlide>
             <TestimonialCard/>
