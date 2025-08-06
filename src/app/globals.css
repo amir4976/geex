@@ -79,6 +79,12 @@ body {
 
 
 
+.bgrainbow{
+  background-image: url("/assets/mastercard-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-import Testimonial from "@/components/template/index1/testimonial/Testimonial";
+import TopBarContainer from "@/components/template/index1/topbarContainer/TopBarContainer";
 import Navbar from "@/components/template/nav/Navbar";
 import React from "react";
 
@@ -12,7 +12,13 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           <Navbar />
         </div>
       </div>
-      <div className=" MainElementContainer">{children}</div>
+      <div className=" MainElementContainer">
+        <div className="w-full ">
+          {/* topbar */}
+          <TopBarContainer />
+          {children}
+        </div>
+      </div>
     </main>
   );
 };

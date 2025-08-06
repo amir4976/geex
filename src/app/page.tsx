@@ -7,18 +7,16 @@ import TopBarContainer from "@/components/template/index1/topbarContainer/TopBar
 import MainLayout from "@/layout/MainLayout";
 import "./globals.css";
 import ColChart from "@/components/module/index1/ColChart/ColChart";
+import RecentProblems from "@/components/module/index1/RecentProblems/RecentProblems";
 
 export default function Home() {
   return (
     <>
-      <MainLayout>
         {/* محتوای اصلی که اسکرول می‌خوره */}
-        <div className="w-full ">
-          {/* topbar */}
-          <TopBarContainer />
 
-          <div className="grid grid-cols-7 gap-10 mt-10 max-xl:flex-col">
-            <div className="col-span-5">
+
+          <div className="grid grid-cols-7 gap-10 mt-10  ">
+            <div className="col-span-5  max-xl:col-span-7">
               <div className="flex flex-col w-full gap-10  ">
                 {/* stateCard */}
 
@@ -44,13 +42,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="  col-span-2 ">
+            <div className="  col-span-2 max-xl:col-span-7 ">
                 <ColChart/>
-
+                <RecentProblems/>
             </div>
           </div>
-        </div>
-      </MainLayout>
+
     </>
   );
 }

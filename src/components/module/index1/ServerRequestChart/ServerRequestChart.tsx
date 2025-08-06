@@ -22,6 +22,28 @@ const getPeydaFont = () => {
     .trim();
 };
 
+
+function getLast60MinutesSlots(): string[] {
+  const now = new Date();
+
+  // گرد کردن به نزدیک‌ترین ۱۰ دقیقه بالا
+  now.setMinutes(Math.ceil(now.getMinutes() / 10) * 10);
+  now.setSeconds(0);
+  now.setMilliseconds(0);
+
+  const result: string[] = [];
+
+  // از ۶ بازه ۱۰ دقیقه‌ای قبل (شامل خود زمان فعلی) شروع کن
+  for (let i = 6; i >= 0; i--) {
+    const slot = new Date(now.getTime() - i * 10 * 60 * 1000);
+    const hours = String(slot.getHours()).padStart(2, "0");
+    const minutes = String(slot.getMinutes()).padStart(2, "0");
+    result.push(`${hours}:${minutes}`);
+  }
+
+  return result;
+}
+
 type props = {
   chartData: number[];
   chartDataSaccond: number[];
@@ -80,16 +102,7 @@ const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
       { name: "محصول 2", data: randomArray()  },
     ],
     xaxis: {
-      categories: [
-        "14:00",
-        "14:10",
-        "14:20",
-        "14:30",
-        "14:40",
-        "14:50",
-        "15:00",
-        "15:10",
-      ],
+      categories:getLast60MinutesSlots(),
       labels: {
         style: {
           fontSize: "14px",
