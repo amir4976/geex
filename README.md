@@ -132,4 +132,4 @@ If you need help or have suggestions, feel free to:
 
 ---
 
-> Made with ❤️ by Geex Team – Build something powerful.
+> Made with ❤️ by A-corp Team – Build something powerful.
