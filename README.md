@@ -4,7 +4,7 @@
 </p>
 
 
-# 🚀 Geex Admin Dashboard – Template Version: index-4
+# 🚀 Geex Admin Dashboard
 
 A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
