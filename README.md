@@ -115,11 +115,11 @@ This project is based on a commercial template. If you obtained it from a legal 
 * UI Design: **Peterdraw / KinoDesign**
 * Assets & Frameworks:
 
-  * [Bootstrap 5](https://getbootstrap.com)
+  * [tailwind](https://tailwind.com)
   * [ApexCharts](https://apexcharts.com)
   * [Chart.js](https://www.chartjs.org)
   * [Feather Icons](https://feathericons.com)
-  * [FontAwesome](https://fontawesome.com)
+  * [iconsax](https://iconsax-react.pages.dev/)
 
 ---
 
