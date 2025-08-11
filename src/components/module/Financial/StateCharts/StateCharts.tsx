@@ -46,7 +46,7 @@ function StateCharts({
       type: "bar",
       fontFamily: font,
       toolbar: {
-        show: false
+        show: false,
       },
     },
     dataLabels: {
@@ -64,7 +64,17 @@ function StateCharts({
         },
       },
     },
-
+    tooltip: {
+      enabled: true,
+      theme: "dark", // تول‌تیپ مشکی
+      style: {
+        fontSize: "12px",
+        fontFamily: font,
+      },
+      marker: {
+        show: true,
+      },
+    },
     xaxis: {
       categories: [
         "شنبه",
