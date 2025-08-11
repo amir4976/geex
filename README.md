@@ -4,7 +4,7 @@
 </p>
 
 
-# 🚀 Geex Admin Dashboard – Template Version: index-4
+# 🚀 Geex Admin Dashboard
 
 A modern, responsive, and feature-rich admin dashboard template built with HTML5, CSS3, and JavaScript. This template is designed for high performance, clean UI/UX, and easy integration into any modern web or backend project.
 
@@ -115,11 +115,11 @@ This project is based on a commercial template. If you obtained it from a legal 
 * UI Design: **Peterdraw / KinoDesign**
 * Assets & Frameworks:
 
-  * [Bootstrap 5](https://getbootstrap.com)
+  * [tailwind](https://tailwind.com)
   * [ApexCharts](https://apexcharts.com)
   * [Chart.js](https://www.chartjs.org)
   * [Feather Icons](https://feathericons.com)
-  * [FontAwesome](https://fontawesome.com)
+  * [iconsax](https://iconsax-react.pages.dev/)
 
 ---
 
@@ -132,4 +132,4 @@ If you need help or have suggestions, feel free to:
 
 ---
 
-> Made with ❤️ by Geex Team – Build something powerful.
+> Made with ❤️ by A-corp Team – Build something powerful.
