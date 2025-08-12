@@ -88,3 +88,8 @@ body {
 
 
 
+.bg-blanced{
+  background-image: url("/assets/balance-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
