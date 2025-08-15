@@ -3,8 +3,6 @@ import ServerRequestChart from "@/components/module/index1/ServerRequestChart/Se
 import MedCharts from "@/components/template/index1/MedCharts/MedCharts";
 import StateCardContainer from "@/components/template/index1/stateCardContainer/StateCardContainer";
 import Testimonial from "@/components/template/index1/testimonial/Testimonial";
-import TopBarContainer from "@/components/template/index1/topbarContainer/TopBarContainer";
-import MainLayout from "@/layout/MainLayout";
 import "./globals.css";
 import ColChart from "@/components/module/index1/ColChart/ColChart";
 import RecentProblems from "@/components/module/index1/RecentProblems/RecentProblems";
@@ -26,8 +24,8 @@ export default function Home() {
                 {/* server request chart */}
                 <div className="w-full element  p-7 rounded-4xl ">
                   <ServerRequestChart
-                    chartData={[50, 80, 60, 90, 85, 100, 120]}
-                    chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
+                    // chartData={[50, 80, 60, 90, 85, 100, 120]}
+                    // chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
                   />
                 </div>
                 {/* end server request chart */}

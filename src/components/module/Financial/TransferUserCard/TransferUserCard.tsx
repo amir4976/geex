@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowDown2, ArrowUp, ArrowUp2 } from "iconsax-reactjs";
+import { ArrowDown2 } from "iconsax-reactjs";
 import Image from "next/image";
 import React from "react";
 

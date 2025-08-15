@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 
-import { ArrowUp, ArrowUp2 } from "iconsax-reactjs";
+import {  ArrowUp2 } from "iconsax-reactjs";
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const getPeydaFont = () => {
@@ -24,7 +24,7 @@ type Props = {
 function StateCharts({
   title,
   price,
-  chartData,
+
   baseColor,
   secondColor,
 }: Props) {

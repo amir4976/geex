@@ -2,9 +2,9 @@ import { ArrowLeft } from "iconsax-reactjs";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
 
-function CurrencyNewsUpdateWidget({}: Props) {
+
+function CurrencyNewsUpdateWidget() {
   return (
     <div className="w-full h-fit bg-linear-to-r to-[#9526D2] from-[#D765FF]  flex flex-col items-start gap-10 p-10 rounded-3xl text-white ">
       <p className="text-3xl peydaBold">همه به روز رسانی اخبار ارزدیجیتال</p>
