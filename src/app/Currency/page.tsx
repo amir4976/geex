@@ -19,8 +19,8 @@ function page() {
             </div>
             <div className="col-span-2 ">
               <MarketActivity
-                chartData={[50, 80, 60, 90, 85, 100, 120]}
-                chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
+                // chartData={[50, 80, 60, 90, 85, 100, 120]}
+                // chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
               />
             </div>
           </div>

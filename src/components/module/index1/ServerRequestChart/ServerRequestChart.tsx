@@ -44,10 +44,10 @@ function getLast60MinutesSlots(): string[] {
   return result;
 }
 
-type props = {
-  chartData: number[];
-  chartDataSaccond: number[];
-};
+// type props = {
+//   chartData: number[];
+//   chartDataSaccond: number[];
+// };
 
 
 
@@ -59,7 +59,7 @@ const randomArray = ()=>{
   return myArray;
 }
 
-const ServerRequestChart = ({ chartData, chartDataSaccond }: props) => {
+const ServerRequestChart = () => {
   const [font, setFont] = useState("PeydaWeb-SemiBold");
 
   useEffect(() => {

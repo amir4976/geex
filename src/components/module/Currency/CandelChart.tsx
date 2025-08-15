@@ -7,6 +7,9 @@ import { More } from "iconsax-reactjs";
 import { btc , etr, ltc } from "./CurrencyTestData";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
+
+
+
 function CandelChart() {
   const [ShowCurrency, setShowCarrency] = useState("btc");
   const [data, setData] = useState(btc);
