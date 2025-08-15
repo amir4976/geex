@@ -30,7 +30,7 @@ export default function Home() {
                 </div>
                 {/* end server request chart */}
 
-                {/* meddiom Charts */}
+                {/* meddiom Charts */} 
                 <MedCharts />
                 {/* end meddiom Charts */}
 
