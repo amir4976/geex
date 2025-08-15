@@ -16,7 +16,7 @@ type NavbarLink = {
 export const navbarLinks: NavbarLink[] = [
   { title: "خانه", link: "/", Icon: LuHouse },
   { title: "ایمیل", link: "/", Icon: FaChartBar },
-  { title: "مخاطبین", link: "/", Icon: FaRegUser },
+  { title: "مخاطبین", link: "/Contact", Icon: FaRegUser },
   { title: "کریپتو", link: "/Currency", Icon: RiMoneyDollarCircleLine },
   { title: "صورتحساب", link: "/Bills", Icon: CiFileOn },
   { title: "حسابداری", link: "/Financial", Icon:CiWallet},

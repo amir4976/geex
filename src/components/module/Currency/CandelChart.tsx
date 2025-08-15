@@ -14,7 +14,7 @@ function CandelChart() {
     setShowCarrency(e);
     if (e === "btc") {
       setData(btc);
-    } else if (e === "etr") {
+    } else if (e === "etr") { 
       setData(etr);
     } else if (e === "ltc") {
       setData(ltc);

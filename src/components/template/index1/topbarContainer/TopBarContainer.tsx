@@ -8,7 +8,7 @@ function TopBarContainer() {
   
   return (
     <div className="flex justify-between items-center p-2 ">
-      <Title title="صورتحساب" desc="به داشبورد  خوش آمدید" />
+      <Title  />
       <AccsessBtns />
     </div>
   );
