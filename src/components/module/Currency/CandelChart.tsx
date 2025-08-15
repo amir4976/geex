@@ -4,32 +4,28 @@ import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import Dropdown from "../DropDown/DropDown";
 import { More } from "iconsax-reactjs";
-import { btc , etr, ltc } from "./CurrencyTestData";
+import { btc, etr, ltc } from "./CurrencyTestData";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
-
-
-
 
 function CandelChart() {
   const [ShowCurrency, setShowCarrency] = useState("btc");
   const [data, setData] = useState(btc);
-  const chengeCurrency = (e:string)=>{
+  const chengeCurrency = (e: string) => {
     setShowCarrency(e);
-    if(e==="btc"){
+    if (e === "btc") {
       setData(btc);
-    }else if (e ==="etr"){
+    } else if (e === "etr") {
       setData(etr);
-    }else if (e=== "ltc"){
-      setData(ltc)
+    } else if (e === "ltc") {
+      setData(ltc);
     }
-  }
+  };
   const option: ApexOptions = {
     series: [
       {
         data,
       },
     ],
-
     chart: {
       toolbar: {
         show: false,
@@ -45,26 +41,53 @@ function CandelChart() {
         enabled: true,
       },
     },
+    tooltip: {
+      enabled: true,
+      custom: ({  seriesIndex, dataPointIndex, w }) => {
+        const o = w.globals.seriesCandleO[seriesIndex][dataPointIndex];
+        const h = w.globals.seriesCandleH[seriesIndex][dataPointIndex];
+        const l = w.globals.seriesCandleL[seriesIndex][dataPointIndex];
+        const c = w.globals.seriesCandleC[seriesIndex][dataPointIndex];
+
+        return `
+        <div class="element">
+          <div class="apexcharts-tooltip-series p-3">
+            <div>Open: <span>${o}</span></div>
+            <div>High: <span>${h}</span></div>
+            <div>Low: <span>${l}</span></div>
+            <div>Close: <span>${c}</span></div>
+          </div>
+        </div>
+      `;
+      },
+    },
   };
+
   return (
     <div className="p-10 rounded-3xl element mt-10">
       <p className="text-2xl peydaBold">دارایی های اصلی</p>
       <div className="flex justify-between mt-10 max-md:flex-col ">
         <div className="flex gap-3">
           <button
-            className={` px-8 py-3 rounded-xl ${ShowCurrency == "btc" ? "bg-blue-500/10":""}`}
+            className={` px-8 py-3 rounded-xl ${
+              ShowCurrency == "btc" ? "bg-blue-500/10" : ""
+            }`}
             onClick={() => chengeCurrency("btc")}
           >
             btc
           </button>
           <button
-            className={` px-8 py-3 rounded-xl ${ShowCurrency == "etr" ? "bg-blue-500/10":""}`}
+            className={` px-8 py-3 rounded-xl ${
+              ShowCurrency == "etr" ? "bg-blue-500/10" : ""
+            }`}
             onClick={() => chengeCurrency("etr")}
           >
             etr
           </button>
           <button
-            className={` px-8 py-3 rounded-xl ${ShowCurrency == "ltc" ? "bg-blue-500/10":""}`}
+            className={` px-8 py-3 rounded-xl ${
+              ShowCurrency == "ltc" ? "bg-blue-500/10" : ""
+            }`}
             onClick={() => chengeCurrency("ltc")}
           >
             ltc
