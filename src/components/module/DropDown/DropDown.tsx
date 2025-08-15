@@ -46,7 +46,7 @@ export default function Dropdown({
           >
             {badge > 99 ? "99+" : badge}
           </span>
-        )}
+        )}  
       </button>
 
       <div
