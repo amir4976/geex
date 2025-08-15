@@ -2,7 +2,7 @@ import React from 'react'
 
 function TestimonialCard() {
   return (
-    <div className="w-full bg-white rounded-4xl flex flex-col gap-6  p-6">
+    <div className="w-full element rounded-4xl flex flex-col gap-6  p-6">
       <div className="flex  gap-3 ">
         <div className="profile w-14 h-14 rounded-full bg-gray-300"></div>
         <div className="flex flex-col">

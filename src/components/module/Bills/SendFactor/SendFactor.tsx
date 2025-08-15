@@ -1,18 +1,17 @@
-import { ArrowDown2, DollarCircle, SearchNormal, Send, Send2 } from "iconsax-reactjs";
+import { ArrowDown2, DollarCircle, SearchNormal, Send } from "iconsax-reactjs";
 import React from "react";
-import Dropdown from "../../DropDown/DropDown";
 
 function SendFactor() {
   return (
-    <div className="w-full flex flex-col gap-10">
+    <div className="w-full flex flex-col gap-10 ">
       <div className="">
         <p className="text-2xl">ارسال فاکتورها</p>
         <p className="text-gray-600 text-sm">آنها در پرواز او موفق می شوند</p>
       </div>
-      <div className="w-full bg-white p-4 flex flex-col gap-10">
+      <div className="w-full element p-4 flex flex-col gap-10 rounded-3xl">
         <div className="flex flex-col gap-2">
           <p>گیرنده را انتخاب کنید</p>
-          <div className="w-full flex justify-between items-center h-14 bg-gray-100 overflow-hidden rounded-2xl relative px-3 text-gray-700">
+          <div className="w-full flex justify-between items-center h-14 bg-black/10 overflow-hidden rounded-2xl relative px-3 text-gray-700">
             <input
               type="text"
               className="w-10/12 h-full focus:outline-none"
@@ -25,7 +24,7 @@ function SendFactor() {
         <div className="flex flex-col gap-2">
           {/* fix it by drop down */}
           <p>گیرنده را انتخاب کنید</p>
-          <div className="w-full h-14 bg-blue-100 overflow-hidden rounded-2xl flex justify-between items-center relative px-3 text-gray-700">
+          <div className="w-full h-14 bg-blue-500/10 overflow-hidden rounded-2xl flex justify-between items-center relative px-3 text-blue-500/50">
             <p> سرویس تعمیر و نگهدرای</p>
             <ArrowDown2 />
           </div>

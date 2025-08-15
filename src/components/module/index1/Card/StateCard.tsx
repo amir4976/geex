@@ -50,10 +50,10 @@ const StatCardWithLineChart: React.FC<Props> = ({
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-3xl p-5  w-full">
+    <div className="flex flex-col md:flex-row items-center justify-between element rounded-3xl p-5  w-full">
            {/* متن سمت راست */}
       <div className="w-full md:w-2/3 flex flex-col  text-right mt-4 md:mt-0 gap-8">
-        <span className="text-lg text-gray-800">{title}</span>
+        <span className="text-lg ">{title}</span>
         <span className="text-2xl font-bold">{value.toLocaleString("fa-IR")}</span>
         <span
           className={`text-sm font-medium ${

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import MainLayout from "@/layout/MainLayout";
+import ThemeInit from "@/layout/ThemeInit";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -43,16 +44,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
+          body-dark
+
           ${peydaReg.variable}
           ${peydaMed.variable}
           ${peydaSemi.variable}
           ${peydaBold.variable}
           antialiased`}
       >
-      <MainLayout>
-
-        {children}
-      </MainLayout>
+        <MainLayout>
+          <ThemeInit />
+          {children}
+        </MainLayout>
       </body>
     </html>
   );

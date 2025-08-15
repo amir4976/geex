@@ -1,8 +1,10 @@
 import TopBarContainer from "@/components/template/index1/topbarContainer/TopBarContainer";
 import Navbar from "@/components/template/nav/Navbar";
+import { useSystemTheme } from "@/hook/UseSystemtheme";
 import React from "react";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
+
   return (
     <main className="MainLayoutContainer ">
       {/* سایدبار ثابت در سمت راست */}

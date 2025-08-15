@@ -24,7 +24,7 @@ export default function Home() {
                 {/* end stateCard */}
 
                 {/* server request chart */}
-                <div className="w-full bg-white p-7 rounded-4xl ">
+                <div className="w-full element  p-7 rounded-4xl ">
                   <ServerRequestChart
                     chartData={[50, 80, 60, 90, 85, 100, 120]}
                     chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}

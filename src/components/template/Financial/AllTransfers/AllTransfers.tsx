@@ -10,7 +10,7 @@ import React from "react";
 
 function AllTransfers() {
   return (
-    <div className="w-full h-fit rounded-3xl bg-white mt-10 ">
+    <div className="w-full h-fit rounded-3xl element mt-10 ">
       {/*  //^section header  */}
       <div className="">
         <div className="flex justify-between items-center px-10 py-6">

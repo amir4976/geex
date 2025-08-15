@@ -4,8 +4,8 @@ import React from "react";
 
 function StatusCards() {
   return (
-    <div className={"w-full grid grid-cols-2 gap-10 "}>
-      <div className="grid grid-cols-2 gap-10">
+    <div className={"w-full grid grid-cols-1 xl:grid-cols-2 gap-10 "}>
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-10">
         <StatusCard number={45} payStatuse={"factorSended"} />
         <StatusCard number={45} payStatuse={"notPayd"} />
         <StatusCard number={45} payStatuse={"payd"} />

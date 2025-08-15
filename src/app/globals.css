@@ -4,6 +4,8 @@
 :root {
   --background: #F3F2F7;
   --foreground: #ffff;
+  --darkground:#17161e;
+  --darkforeground:#1f1e26;
 }
 
 @theme inline {
@@ -48,6 +50,31 @@ body {
   margin: 0;
   box-sizing: border-box;
 
+}
+.body-dark{
+ background: var(--darkground);
+  color: white;
+  font-family: var(--font-peydaReg), Arial, Helvetica, sans-serif;
+  direction: rtl; 
+}
+
+.body-dark .element{
+  background: var(--darkforeground);
+}
+
+.body-light {
+  background: var(--background);
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--darkground);
+    color: white;
+  }
+}
+.body-light .element{
+  background:white;
 }
 
 .MainLayoutContainer{

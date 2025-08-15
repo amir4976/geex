@@ -132,7 +132,7 @@ function StateCharts({
   };
 
   return (
-    <div className="rounded-4xl p-8 bg-white flex flex-col gap-10">
+    <div className="rounded-4xl p-8 element flex flex-col gap-10">
       <p className="text-2xl">{title}</p>
       <div className="flex w-full justify-between items-center">
         <div className="">
