@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-
 :root {
-  --background: #F3F2F7;
+  --background: #f3f2f7;
   --foreground: #ffff;
-  --darkground:#17161e;
-  --darkforeground:#1f1e26;
+  --darkground: #17161e;
+  --darkforeground: #1f1e26;
 }
 
 @theme inline {
@@ -17,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-  --background: #F3F2F7;
-  --foreground: #ffff;
+    --background: #f3f2f7;
+    --foreground: #ffff;
   }
 }
 
@@ -36,29 +35,31 @@
   font-family: var(--font-peydaBold);
 }
 
-*{
+* {
   font-family: var(--font-peydaMed);
-
 }
 
 body {
   background: var(--background);
   color: black;
   font-family: var(--font-peydaReg), Arial, Helvetica, sans-serif;
-  direction: rtl; 
-    padding: 0;
+  direction: rtl;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-
+  overflow-x: hidden;
+  transition: all 1s;
 }
-.body-dark{
- background: var(--darkground);
+.body-dark {
+  background: var(--darkground);
   color: white;
   font-family: var(--font-peydaReg), Arial, Helvetica, sans-serif;
-  direction: rtl; 
+  direction: rtl;
+  transition: all 1s;
 }
 
-.body-dark .element{
+.body-dark .element {
+  transition: all 1s;
   background: var(--darkforeground);
 }
 
@@ -73,21 +74,20 @@ body {
     color: white;
   }
 }
-.body-light .element{
-  background:white;
+.body-light .element {
+  background: white;
 }
 
-.MainLayoutContainer{
-  display: flex ;
+.MainLayoutContainer {
+  display: flex;
   gap: 20px;
-  
 }
-.SideBarNavContainer{
+.SideBarNavContainer {
   display: flex;
   width: 320px;
 }
-.MainElementContainer{
-  flex:1;
+.MainElementContainer {
+  flex: 1;
   display: flex;
   width: 100%;
   padding: 25px;
@@ -104,18 +104,13 @@ body {
   flex-wrap: nowrap; /* خطی بمونه */
 }
 
-
-
-.bgrainbow{
+.bgrainbow {
   background-image: url("/assets/mastercard-bg.svg");
   background-size: cover;
   background-position: center;
 }
 
-
-
-
-.bg-blanced{
+.bg-blanced {
   background-image: url("/assets/balance-bg.svg");
   background-size: cover;
   background-position: center;

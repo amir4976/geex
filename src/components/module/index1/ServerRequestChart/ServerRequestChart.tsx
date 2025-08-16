@@ -87,6 +87,7 @@ const ServerRequestChart = () => {
       style: {
         fontSize: "19px",
         fontWeight: "bold",
+        color:"#616161"
       },
     },
     colors: ["#F9C200", "#00C9A7"],
@@ -123,13 +124,14 @@ const ServerRequestChart = () => {
     legend: {
       position: "top",
       horizontalAlign: "left",
+      
     },
     tooltip: {
       custom: ({ series, seriesIndex, dataPointIndex, w }) => {
         const name = w.globals.seriesNames[seriesIndex];
         const value = series[seriesIndex][dataPointIndex];
         return `
-        <div style="direction: rtl; text-align: right; padding: 10px; font-family: var(--font-peydaSemi);">
+        <div class="element apexcharts-tooltip-series p-3" style="direction: rtl; text-align: right; padding: 10px; font-family: var(--font-peydaSemi); ">
           <strong>${value} درخواست</strong><br/>
           <span style="color: ${w.config.colors[seriesIndex]}">${name}</span>
         </div>
