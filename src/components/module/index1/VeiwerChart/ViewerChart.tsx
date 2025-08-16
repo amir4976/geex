@@ -84,6 +84,22 @@ function ViewerChart() {
         show: false,
       },
     },
+tooltip: {
+      custom: ({ seriesIndex, dataPointIndex, w }) => {
+        const name = w.globals.seriesNames[seriesIndex];
+        const value = w.globals.series[seriesIndex][dataPointIndex];
+        const category = w.globals.labels[dataPointIndex];
+        console.log(category)
+
+        return `
+      <div class="element apexcharts-tooltip-series p-3" style="direction: rtl; text-align: right; padding: 10px; font-family: var(--font-peydaSemi);">
+        <strong>${value} </strong><br/>
+        <span>${name} </span> <br />
+        <span>${category}</span>
+      </div>
+    `;
+      },
+    },
   };
 
   return (

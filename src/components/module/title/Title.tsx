@@ -2,20 +2,22 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { navbarLinks } from "@/utils/Utils";
-// type Props = {
-//   title: string;
-//   desc: string;
-// };
 
 function Title() {
   const pathname = usePathname();
-  const pagetitle = navbarLinks.filter((item) => item.link == pathname);
-  console.log(pagetitle[0].title);
+
+  // پیدا کردن صفحه‌ی مربوطه
+  const page = navbarLinks.find((item) => item.link === pathname);
+
+  // اگر پیدا نشد، fallback بذار
+  const pageTitle = page?.title || pathname?.replace("/", "") || "صفحه ناشناس";
 
   return (
-    <div className="">
-      <p className="text-3xl peydaBold">{pagetitle[0].title}</p>
-      <p className="text-sm peydasemi">به داشبورد مدرن ادمینیgeex خوش امدید</p>
+    <div>
+      <p className="text-3xl peydaBold">{pageTitle}</p>
+      <p className="text-sm peydasemi">
+        به داشبورد مدرن ادمینی geex خوش آمدید
+      </p>
     </div>
   );
 }

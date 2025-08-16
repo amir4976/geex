@@ -26,6 +26,7 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
   data,
 
 }: TableProps<T>) {
+  
   const [selectedRows, setSelectedRows] = useState<Set<number>>(new Set());
 
   const allSelected = selectedRows.size === data.length && data.length > 0;

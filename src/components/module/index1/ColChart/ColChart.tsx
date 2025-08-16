@@ -98,11 +98,9 @@ function ColChart() {
         const name = w.globals.seriesNames[seriesIndex];
         const value = w.globals.series[seriesIndex][dataPointIndex];
         return `
-      <div style="direction: rtl; text-align: right; padding: 10px; font-family: var(--font-peydaSemi);">
+      <div class="element apexcharts-tooltip-series p-3" style="direction: rtl; text-align: right; padding: 10px; font-family: var(--font-peydaSemi);">
         <strong>${toPersianDigits(value)} درخواست</strong><br/>
-        <span style="color: ${
-          w.config.colors?.[seriesIndex] || "#000"
-        }">${name}</span>
+        <span>${name}</span>
       </div>
     `;
       },

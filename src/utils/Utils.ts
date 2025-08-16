@@ -20,7 +20,7 @@ export const navbarLinks: NavbarLink[] = [
   { title: "کریپتو", link: "/Currency", Icon: RiMoneyDollarCircleLine },
   { title: "صورتحساب", link: "/Bills", Icon: CiFileOn },
   { title: "حسابداری", link: "/Financial", Icon:CiWallet},
-  { title: "مدیریت فایل", link: "/", Icon: GoFileDirectory },
+  { title: "مدیریت فایل", link: "/FileManager", Icon: GoFileDirectory },
   { title: "تقویم", link: "/", Icon: CiCalendar },
   { title: "تودو لیست", link: "/", Icon: LuPencil },
 ];
