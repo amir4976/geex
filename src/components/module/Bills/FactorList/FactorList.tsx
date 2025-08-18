@@ -49,7 +49,7 @@ const data: Record<string, Factor>[] = [
           <p className="text-2xl peydaBold">لیست فاکتورها</p>
           <p className="text-md text-gray-500">آنها در پرواز او موفق می‌شوند</p>
         </div>
-        <div className="[&>*]:bg-blue-200 [&>*]:p-3 [&>*]:rounded-2xl gap-2 flex justify-center items-center">
+        <div className="[&>*]:bg-fuchsia-400 [&>*]:p-3 [&>*]:rounded-2xl gap-2 flex justify-center items-center">
           <button className="flex gap-1">
             جدیدترین <ArrowDown2 />
           </button>

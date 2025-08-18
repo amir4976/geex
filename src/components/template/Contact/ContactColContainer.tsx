@@ -36,7 +36,7 @@ function ContactColContainer({ contactData }: Props) {
             key={index + 1}
             onClick={() => setCurrentPage(index + 1)}
             className={`w-10 h-10 bg-blue-500 rounded-xl  ${
-              CurrentPage === index + 1 ? "bg-blue-500/40" : "bg-blue-500"
+              CurrentPage === index + 1 ? "bg-blue-500/35" : "bg-blue-400"
             }`}
           >
             {index + 1}

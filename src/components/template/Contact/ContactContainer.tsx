@@ -1,6 +1,6 @@
 "use client";
 import { testContact } from "@/utils/Utils";
-import { HamburgerMenu, Menu } from "iconsax-reactjs";
+import { HamburgerMenu, Heart, Menu } from "iconsax-reactjs";
 import React, { useState } from "react";
 import ContactColContainer from "./ContactColContainer";
 import ContactRowContainer from "./ContactRowCantainer";
@@ -10,16 +10,17 @@ function ContactContainer() {
   return (
     <div className="flex flex-col mt-10">
       <div className="flex justify-between items-center">
-        <button className="px-6 py-4  bg-blue-400 rounded-2xl">
+        <button className="px-6 py-4 text-white  bg-fuchsia-400 rounded-2xl">
           مخاطب جدید
         </button>
         <div className="flex gap-4 items-center">
-          <button className="px-6 py-4 bg-blue-400/40 hover:bg-blue-400 rounded-2xl border-blue-400 border transition-all">
-            مورد علاقه
+          <button className="px-6 py-4 flex items-center gap-2 bg-blue-400/20 hover:bg-fuchsia-400 rounded-2xl border-blue-400 border transition-all ">
+            مورد علاقه (20)
+            <Heart size="15" />
           </button>
           <button
             className={`p-4 rounded-2xl  ${
-              !isCol ? "bg-blue-400" : "bg-blue-400/40"
+              !isCol ? "bg-fuchsia-400" : "bg-blue-400/40"
             }`}
             onClick={() => setIsCol(false)}
           >
@@ -27,7 +28,7 @@ function ContactContainer() {
           </button>
           <button
             className={`p-4 rounded-2xl  ${
-              !isCol ? "bg-blue-400/40" : "bg-blue-400"
+              !isCol ? "bg-blue-400/40" : "bg-fuchsia-400"
             }`}
             onClick={() => setIsCol(true)}
           >
