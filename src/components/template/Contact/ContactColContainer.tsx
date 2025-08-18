@@ -26,7 +26,7 @@ function ContactColContainer({ contactData }: Props) {
     <div>
       <div className={`gap-10 grid   grid-cols-4  transition-all mt-10`}>
         {currentItems.map((contact) => (
-          <ContactCard key={contact.id} />
+          <ContactCard key={contact.id} contact={contact} />
         ))}
       </div>
 
