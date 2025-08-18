@@ -3,6 +3,7 @@ import { testContact } from "@/utils/Utils";
 import { HamburgerMenu, Menu } from "iconsax-reactjs";
 import React, { useState } from "react";
 import ContactColContainer from "./ContactColContainer";
+import ContactRowContainer from "./ContactRowCantainer";
 
 function ContactContainer() {
   const [isCol, setIsCol] = useState(true);
@@ -34,8 +35,12 @@ function ContactContainer() {
           </button>
         </div>
       </div>
-          <ContactColContainer  contactData={testContact}/>
-
+      {/* <ContactColContainer contactData={testContact} /> */}
+      {isCol ? (
+        <ContactColContainer contactData={testContact} />
+      ) : (
+        <ContactRowContainer contactData={testContact} />
+      )}
     </div>
   );
 }

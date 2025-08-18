@@ -4,7 +4,16 @@ import React from "react";
 import { CiMail, CiPhone } from "react-icons/ci";
 import { FaRegAddressCard } from "react-icons/fa";
 
-function ContactCard() {
+interface Props {
+  contact: {
+    name: string;
+    email: string;
+    phone: string;
+    company: string;
+    image: string;
+  };
+}
+function ContactCard({ contact }: Props) {
   return (
     <>
       <div className="col-span-1 element p-8 rounded-4xl flex flex-col gap-6">
@@ -22,15 +31,15 @@ function ContactCard() {
           </div>
         </div>
 
-        <p className="text-xl font-bold">دیوید کولپین</p>
-        <p className="text-gray-500">طراح تحرک منطقه</p>
+        <p className="text-xl font-bold">{contact.name}</p>
+        <p className="text-gray-500">{contact.title}</p>
 
         <div className="flex  gap-3">
           <div className=" text-blue-500">
             {" "}
             <CiPhone />
           </div>
-          <p>09123456789</p>
+          <p>{contact.phone}</p>
         </div>
 
         <div className="flex gap-3">
@@ -38,7 +47,7 @@ function ContactCard() {
             {" "}
             <FaRegAddressCard />
           </div>
-          <p>استودیوهای پرسرعت</p>
+          <p>{contact.company}</p>
         </div>
 
         <div className="flex gap-3">
@@ -46,7 +55,7 @@ function ContactCard() {
             {" "}
             <CiMail />
           </div>
-          <p>ahmadileffie</p>
+          <p>{contact.email}</p>
         </div>
       </div>
     </>
