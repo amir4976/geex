@@ -1,7 +1,8 @@
 "use client";
-import ContactCard from "@/components/module/Contact/ContactCard";
+import { testContact } from "@/utils/Utils";
 import { HamburgerMenu, Menu } from "iconsax-reactjs";
 import React, { useState } from "react";
+import ContactColContainer from "./ContactColContainer";
 
 function ContactContainer() {
   const [isCol, setIsCol] = useState(true);
@@ -33,31 +34,8 @@ function ContactContainer() {
           </button>
         </div>
       </div>
+          <ContactColContainer  contactData={testContact}/>
 
-      <div
-        className={`grid  ${
-          isCol ? "grid-cols-1" : "grid-cols-4"
-        } gap-4 transition-all mt-10`}
-      >
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-        <div className={`col-span-1 max-md:col-span-4 element rounded-2xl p-10 w-full flex ${!isCol ?"flex-col  " :"justify-between "} gap-5 relative`}>
-          <ContactCard />
-        </div>
-      </div>
     </div>
   );
 }

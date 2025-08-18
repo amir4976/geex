@@ -4,7 +4,7 @@
   --background: #f3f2f7;
   --foreground: #ffff;
   --darkground: #17161e;
-  --darkforeground: #1f1e26;
+  --darkforeground: #24232C;
 }
 
 @theme inline {
@@ -64,6 +64,7 @@ body {
 }
 
 .body-light {
+  transition: all 1s;
   background: var(--background);
   color: black;
 }
