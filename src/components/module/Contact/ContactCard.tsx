@@ -1,4 +1,4 @@
-import { More } from "iconsax-reactjs";
+import { Heart, More } from "iconsax-reactjs";
 import Image from "next/image";
 import React from "react";
 import { CiMail, CiPhone } from "react-icons/ci";
@@ -7,37 +7,47 @@ import { FaRegAddressCard } from "react-icons/fa";
 function ContactCard() {
   return (
     <>
-      <div className="flex justify-between items-center  ">
-        <Image className="w-20 h-20 rounded-xl bg-blue-400" width={80} height={80} alt="prof" src={'/assets/b2d9e74cfd6f82e3f7f8e0d5b81d456b.jpg'}/>
-      </div>
+      <div className="col-span-1 element p-8 rounded-4xl flex flex-col gap-6">
+        <div className="  flex justify-between items-center ">
+          <Image
+            className="w-20 h-20 rounded-3xl bg-blue-400"
+            width={75}
+            height={75}
+            alt="prof"
+            src={"/assets/04.png"}
+          />
+          <div className="flex gap-5">
+            <Heart />
+            <More />
+          </div>
+        </div>
 
-      <div className="flex flex-col ">
-        <p className="text-xl font-bold">ahmadi leffie</p>
-        <p className="text-gray-500">central</p>
-      </div>
+        <p className="text-xl font-bold">دیوید کولپین</p>
+        <p className="text-gray-500">طراح تحرک منطقه</p>
 
-      <div className="flex flex-col">
-        <div className="flex  gap-3 ">
-          <CiPhone />
+        <div className="flex  gap-3">
+          <div className=" text-blue-500">
+            {" "}
+            <CiPhone />
+          </div>
           <p>09123456789</p>
         </div>
 
         <div className="flex gap-3">
-          <FaRegAddressCard />
-          <p>brokline,higeschool</p>
+          <div className=" text-blue-500">
+            {" "}
+            <FaRegAddressCard />
+          </div>
+          <p>استودیوهای پرسرعت</p>
         </div>
 
         <div className="flex gap-3">
-          <CiMail />
+          <div className=" text-blue-500">
+            {" "}
+            <CiMail />
+          </div>
           <p>ahmadileffie</p>
         </div>
-      </div>
-
-
-
-
-      <div className=" absolute left-5 top-5 ">
-        <More />
       </div>
     </>
   );
