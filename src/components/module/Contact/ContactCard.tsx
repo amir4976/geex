@@ -10,7 +10,6 @@ interface Props {
     email: string;
     phone: string;
     company: string;
-    image: string;
   };
 }
 function ContactCard({ contact }: Props) {

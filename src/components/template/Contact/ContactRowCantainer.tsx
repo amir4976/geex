@@ -1,4 +1,6 @@
+import { Heart, More } from "iconsax-reactjs";
 import React, { useState } from "react";
+import Dropdown from "../../module/DropDown/DropDown";
 type Contact = {
   id: number;
   name: string;
@@ -40,7 +42,16 @@ function ContactRowContainer({ contactData }: Props) {
               <td>{contact.company}</td>
               <td>{contact.phone}</td>
               <td>{contact.email}</td>
-              <td></td>
+              <td>
+                <div className="flex gap-3 ">
+                  <Dropdown icon={<More />}>
+                    <button className="  rounded-full w-full text-right h-10  ">
+                        حذف
+                    </button>
+                  </Dropdown>
+                  <Heart />
+                </div>
+              </td>
             </tr>
           ))}
         </table>
