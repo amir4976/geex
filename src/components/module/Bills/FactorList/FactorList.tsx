@@ -3,44 +3,67 @@ import { ArrowDown2, Element3, HamburgerMenu } from "iconsax-reactjs";
 import React from "react";
 import HeroTable from "./HeroTable"; // این همون جدولیه که از Hero UI کپی کردی
 
-
-
-
 interface Factor {
   id: number;
   name: string;
   price: string;
   status: string;
-  date:string;
+  date: string;
 }
-interface FactorHeader{
-    id: number;
+interface FactorHeader {
+  id: number;
   name: string;
   price: string;
   status: string;
   date: string;
+  profile:string;
 }
-
 
 type TableColumn<T> = {
   key: keyof T;
   label: string;
 };
 
-
 function FactorList() {
-const columns: TableColumn<FactorHeader>[] = [
-  { key: "id", label: "شناسه" },
-  { key: "name", label: "دریافت کننده" },
-  { key: "date", label: "تاریخ" },
-  { key: "price", label: "مقدار" },
-  { key: "status", label: "وضعیت" },
-];
+  const columns: TableColumn<FactorHeader>[] = [
+    { key: "id", label: "شناسه" },
+    { key: "profile", label: "تصویر" },
+    { key: "name", label: "دریافت کننده" },
+    { key: "date", label: "تاریخ" },
+    { key: "price", label: "مقدار" },
+    { key: "status", label: "وضعیت" },
+  ];
 
-const data: Record<string, Factor>[] = [
-  { row1: { id: 1, name: "فاکتور 1", price: "200,000", status: "پرداخت شده", date:"lorem" } },
-  { row2: { id: 2, name: "فاکتور 2", price: "350,000", status: "در انتظار", date:"lorem" } },
-];
+  const data: Factor[] = [
+    {
+      id: 1,
+      name: "فاکتور 1",
+      price: "200,000",
+      status: "پرداخت شده",
+      date: "lorem",
+    },
+    {
+      id: 2,
+      name: "فاکتور 2",
+      price: "350,000",
+      status: "در انتظار",
+      date: "lorem",
+    },
+    {
+      id: 3,
+      name: "فاکتور 2",
+      price: "350,000",
+      status: "در انتظار",
+      date: "lorem",
+    },
+    {
+      id: 4,
+      name: "فاکتور 2",
+      price: "350,000",
+      status: "در انتظار",
+      date: "lorem",
+    },
+  ];
   return (
     <div>
       {/* header */}
@@ -63,11 +86,11 @@ const data: Record<string, Factor>[] = [
       </div>
       {/* end header */}
 
-      <div className="w-full h-fit rounded-3xl p-5 element mt-10">
+      <div className="w-full h-fit rounded-3xl py-5 element mt-10">
         <HeroTable
           columns={columns}
           data={data}
-          onSelect={(item:unknown) => console.log("انتخاب شد:", item)}
+          onSelect={(item: unknown) => console.log("انتخاب شد:", item)}
         />
       </div>
     </div>

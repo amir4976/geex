@@ -27,33 +27,35 @@ function ContactRowContainer({ contactData }: Props) {
     <div>
       <div className="rounded-3xl element p-7 mt-10">
         <table className="table table-auto w-full  text-center mt-10">
-          <tr className="text-blue-500">
-            <th>نام</th>
-            <th> تعیین</th>
-            <th> شرکت</th>
-            <th>شماره</th>
-            <th> ایمیل</th>
-            <th></th>
-          </tr>
-          {currentItems.map((contact) => (
-            <tr key={contact.id} className="h-20 border-b border-gray-500/40">
-              <td>{contact.name}</td>
-              <td>{contact.title}</td>
-              <td>{contact.company}</td>
-              <td>{contact.phone}</td>
-              <td>{contact.email}</td>
-              <td>
-                <div className="flex gap-3 ">
-                  <Dropdown icon={<More />}>
-                    <button className="  rounded-full w-full text-right h-10  ">
-                        حذف
-                    </button>
-                  </Dropdown>
-                  <Heart />
-                </div>
-              </td>
+          <tbody>
+            <tr className="text-blue-500">
+              <th>نام</th>
+              <th> تعیین</th>
+              <th> شرکت</th>
+              <th>شماره</th>
+              <th> ایمیل</th>
+              <th></th>
             </tr>
-          ))}
+            {currentItems.map((contact) => (
+              <tr key={contact.id} className="h-20 border-b border-gray-500/40">
+                <td>{contact.name}</td>
+                <td>{contact.title}</td>
+                <td>{contact.company}</td>
+                <td>{contact.phone}</td>
+                <td>{contact.email}</td>
+                <td>
+                  <div className="flex gap-3 ">
+                    <Dropdown icon={<More />}>
+                      <button className="  rounded-full w-full text-right h-10  ">
+                        حذف
+                      </button>
+                    </Dropdown>
+                    <Heart />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
 

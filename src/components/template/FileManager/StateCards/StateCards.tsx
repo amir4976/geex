@@ -1,18 +1,14 @@
-"use client"
-import StateCard from "@/components/module/FileManager/StateCard";
-import React from "react";
-
+import React from 'react'
+import StateCard from '@/components/module/FileManager/StateCard'
 function StateCards() {
   return (
-    <div>
-      <div className="grid grid-cols-1 gap-4  lg:grid-cols-4 md:grid-cols-2 rounded-3xl   md:gap-8 mt-10">
-        <StateCard used={40} total={100}/>
-        <StateCard used={30} total={100}/>
-        <StateCard used={10} total={100}/>
-        <StateCard used={80} total={100}/>
-      </div>
+    <div className="grid grid-cols-4 gap-4 mt-4">
+      <StateCard used={41} total={100}/>
+      <StateCard used={41} total={100}/>
+      <StateCard used={41} total={100}/>
+      <StateCard used={41} total={100}/>
     </div>
   );
 }
 
-export default StateCards;
+export default StateCards
