@@ -12,7 +12,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <div className=" SideBarNavContainer ">
           <Navbar />
         </div>
-      </div>
+      </div> 
       <div className=" MainElementContainer">
         <div className="w-full ">
           {/* topbar */}
