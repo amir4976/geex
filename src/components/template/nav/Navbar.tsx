@@ -41,7 +41,9 @@ function Navbar() {
               <li
                 key={index}
                 // active by path
-                className={`${path == item.link ? "bg-violet-200" : ""}`}
+                className={`${
+                  path == item.link ? "bg-blue-400/20 text-blue-400" : ""
+                }`}
               >
                 <Link
                   href={item.link}

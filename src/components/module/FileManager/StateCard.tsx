@@ -48,17 +48,7 @@ const StateCard: React.FC<StateCardProps> = ({ used, total }) => {
       },
     },
     fill: {
-      type: "gradient",
-      gradient: {
-        shade: "dark",
-        type: "horizontal",
-        shadeIntensity: 0.5,
-        gradientToColors: [randomColor()],
-        inverseColors: true,
-        opacityFrom: 1,
-        opacityTo: 1,
-        stops: [0, 100],
-      },
+      colors: [randomColor()], // ✅ رنگ مربوط به مقدار استفاده شده
     },
 
     stroke: {

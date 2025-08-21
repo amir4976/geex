@@ -3,15 +3,24 @@
 import { Link, More, Printer } from "iconsax-reactjs";
 import React, { useState } from "react";
 import Dropdown from "../../DropDown/DropDown";
+import Image from "next/image";
 
 type TableColumn<T> = {
   key: keyof T;
   label: string;
 };
 
+interface Factor {
+  id: number;
+  name: string;
+  price: string;
+  status: string;
+  date: string;
+}
+
 interface TableProps<T> {
   columns: TableColumn<T>[];
-  data: T[];
+  data: Factor[];
   onSelect?: (item: T) => void; // اضافه شد
 }
 interface Factor {
@@ -19,14 +28,13 @@ interface Factor {
   name: string;
   price: string;
   status: string;
-  date:string;
+  date: string;
 }
-export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
+
+export default function HeroUICheckboxTable<T extends Record<string, Factor>>({
   columns,
   data,
-
 }: TableProps<T>) {
-  
   const [selectedRows, setSelectedRows] = useState<Set<number>>(new Set());
 
   const allSelected = selectedRows.size === data.length && data.length > 0;
@@ -45,15 +53,14 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
       updated.delete(idx);
     } else {
       updated.add(idx);
-    } 
+    }
     setSelectedRows(updated);
   };
-
   return (
     <div className="">
       <table className="min-w-full text-sm ">
         <thead className=" text-xs uppercase h-20 border-b border-gray-200/50">
-          <tr>
+          <tr className="">
             {/* ستون انتخاب همه */}
             <th className="">
               <input
@@ -68,7 +75,7 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
               <th
                 key={String(col.key)}
                 scope="col"
-                className="px-6 py-3 text-right font-semibold"
+                className="px-6 py-3text-center font-semibold"
               >
                 {col.label}
               </th>
@@ -80,12 +87,13 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
         <tbody>
           {data.length > 0 ? (
             data.map((row, idx) => {
+              console.log(row);
               const isSelected = selectedRows.has(idx);
               return (
                 <tr
                   key={idx}
-                  className={`border-b border-gray-200/50  h-20   hover:border-l-blue-500 transition-all ${
-                    isSelected ? "bg-blue-500/10" : "element"
+                  className={`border-b border-gray-200/50  h-20 text-center hover:border-r-blue-500 transition-all border-r-4 border-r-blue-500/0  ${
+                    isSelected ? "bg-violet-400/10" : "element"
                   }`}
                 >
                   {/* چک‌باکس هر ردیف */}
@@ -97,11 +105,23 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
                       className="w-4 h-4 accent-blue-600 cursor-pointer"
                     />
                   </td>
-                  {columns.map((col) => (
-                    <td key={String(col.key)} className="px-6 py-4">
-                      {String(row[col.key])}
-                    </td>
-                  ))}
+                  <td>{row.id}</td>
+                  <td className=" mt-3">
+                    <Image
+                      src={"/assets/04.png"}
+                      width={50}
+                      height={50}
+                      alt="user"
+                    />
+                  </td>
+                  <td>{row.name}</td>
+                  <td>{row.date}</td>
+                  <td>{row.price}</td>
+                  <td>
+                    <p className="bg-blue-500/10 p-2 w-fit rounded-xl">
+                      {row.status}
+                    </p>
+                  </td>
 
                   <td className="text-center">
                     <button className="ml-3">
@@ -111,17 +131,12 @@ export default function HeroUICheckboxTable<T extends Record<string,Factor>>({
                       <Printer />
                     </button>
                     <Dropdown icon={<More color={"#5e5e5e"} />} size="sm">
-                      <button
-                        className="text-black text-right  py-2 hover:text-blue-400 leading-5"
-                      >
-                       ویرایش
+                      <button className="text-black text-right  py-2 hover:text-blue-400 leading-5">
+                        ویرایش
                       </button>
-                      <button
-                        className="text-black text-right  py-2 hover:text-red-400 leading-5"
-                      >
-                       حذف
+                      <button className="text-black text-right  py-2 hover:text-red-400 leading-5">
+                        حذف
                       </button>
-                      
                     </Dropdown>
                   </td>
                 </tr>

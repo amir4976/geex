@@ -8,6 +8,7 @@ interface Props {
   contact: {
     name: string;
     email: string;
+    title:string;
     phone: string;
     company: string;
   };

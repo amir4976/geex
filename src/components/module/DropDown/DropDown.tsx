@@ -46,13 +46,15 @@ export default function Dropdown({
           >
             {badge > 99 ? "99+" : badge}
           </span>
-        )}  
+        )}
       </button>
 
       <div
-        className={`origin-top z-50 transform transition-transform duration-500 ease-out absolute left-0 mt-2 rounded-xl shadow-lg element  ring-opacity-5 overflow-hidden flex flex-col p-5 text-right
-          ${size === "sm" ? "w-44" : "w-56"}
-          ${open ? "scale-y-100" : "scale-y-0"}`}
+        className={`origin-top z-50 transform transition-transform duration-500 ease-out absolute left-0 mt-2 rounded-xl shadow-lg element  ring-opacity-5 overflow-hidden flex flex-col p-5 text-right 
+          ${size === "sm" && "w-44"}
+          ${size === "med" && "w-54"}
+          ${size === "lg" && "w-88"}
+          ${open ? "scale-y-100 " : "scale-y-0 opacity-0"}`}
         style={{ transformOrigin: "top" }}
       >
         {children}
