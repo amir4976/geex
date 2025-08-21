@@ -3,7 +3,7 @@
 :root {
   --background: #f3f2f7;
   --foreground: #ffff;
-  --darkground: #17161E;
+  --darkground: #17161e;
   --darkforeground: #1f1e26;
 }
 
@@ -50,8 +50,10 @@ body {
   overflow-x: hidden;
   transition: all 1s;
 }
+
+/* dark them class */
 .body-dark {
-  background:  var(--darkground);
+  background: var(--darkground);
   color: white;
   font-family: var(--font-peydaReg), Arial, Helvetica, sans-serif;
   direction: rtl;
@@ -75,7 +77,10 @@ body {
     color: white;
   }
 }
+/* light them class */
 .body-light .element {
+  transition: all 1s;
+
   background: white;
 }
 
