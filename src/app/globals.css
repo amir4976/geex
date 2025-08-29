@@ -39,6 +39,13 @@
   font-family: var(--font-peydaMed);
 }
 
+  /* i found grid back ground usage  */
+  /* background-color: #ff0000; رنگ اصلی */
+/* background-image:  */
+  /* repeating-linear-gradient(0deg, #ccc, #ad3e3e 1px, transparent 1px, transparent 20px), */
+  /* repeating-linear-gradient(90deg, #ccc, #826a6a 1px, transparent 1px, transparent 20px); */
+
+
 body {
   background: var(--background);
   color: black;
