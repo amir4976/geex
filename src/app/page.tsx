@@ -6,6 +6,7 @@ import Testimonial from "@/components/template/index1/testimonial/Testimonial";
 import "./globals.css";
 import ColChart from "@/components/module/index1/ColChart/ColChart";
 import RecentProblems from "@/components/module/index1/RecentProblems/RecentProblems";
+import RecentActivitis from "@/components/module/global/RecentActivitis";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
             <div className="  col-span-2 max-xl:col-span-7 ">
                 <ColChart/>
                 <RecentProblems/>
+                <RecentActivitis/>
             </div>
           </div>
 
