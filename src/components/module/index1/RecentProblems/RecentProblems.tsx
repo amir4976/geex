@@ -23,7 +23,7 @@ export function Problems() {
       <div className="w-full flex justify-between items-center">
         <div className="flex gap-3">
           {" "}
-          <div className="w-16 h-16 bg-white rounded-3xl flex justify-center items-center ">
+          <div className="w-16 h-16 element rounded-3xl flex justify-center items-center ">
             <Image src={'/assets/logo-g.png'} alt="" width={30} height={30}/>
           </div>
           <div className=" flex flex-col justify-center">

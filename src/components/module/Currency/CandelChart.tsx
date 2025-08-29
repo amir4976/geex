@@ -94,9 +94,9 @@ function CandelChart() {
           </button>
         </div>
         <div className="p-1 rounded-2xl bg-blue-500/10">
-          <Dropdown icon={<More color="#000000" />}>
-            <p className="text-md peydaBold">ویرایش</p>
-            <p className="text-md peydaBold">حذف</p>
+          <Dropdown icon={<More  />} size="sm">
+            <p className="text-md peydaBold p-3 cursor-pointer ">ویرایش</p>
+            <p className="text-md peydaBold p-3 cursor-pointer ">حذف</p>
           </Dropdown>
         </div>
       </div>
