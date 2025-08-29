@@ -1,17 +1,27 @@
 "use client";
 import { testContact } from "@/utils/Utils";
-import { HamburgerMenu, Heart, Menu } from "iconsax-reactjs";
+import { ElementPlus, HamburgerMenu, Heart, Menu } from "iconsax-reactjs";
 import React, { useState } from "react";
 import ContactColContainer from "./ContactColContainer";
 import ContactRowContainer from "./ContactRowCantainer";
+import AddContactModal from "@/components/module/Contact/AddContactModal";
 
 function ContactContainer() {
   const [isCol, setIsCol] = useState(true);
+  const [isShowModal, setIsShowModal] = useState(false);
+  const addNewContact = async () => {
+    setIsShowModal(true);
+  };
+
   return (
     <div className="flex flex-col mt-10">
       <div className="flex justify-between items-center">
-        <button className="px-6 py-4 text-white  bg-fuchsia-400 rounded-2xl">
+        <button
+          onClick={() => addNewContact()}
+          className="px-6 py-4 text-white  bg-fuchsia-400 rounded-2xl cursor-pointer flex gap-2"
+        >
           مخاطب جدید
+          <ElementPlus />
         </button>
         <div className="flex gap-4 items-center">
           <button className="px-6 py-4 flex items-center gap-2 bg-blue-400/20 hover:bg-fuchsia-400 rounded-2xl border-blue-400 border transition-all ">
@@ -42,6 +52,11 @@ function ContactContainer() {
       ) : (
         <ContactRowContainer contactData={testContact} />
       )}
+      <div className="">
+        {isShowModal ? (
+          <AddContactModal setisShowModal={setIsShowModal} />
+        ) : null}
+      </div>
     </div>
   );
 }

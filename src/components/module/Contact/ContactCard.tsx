@@ -16,7 +16,7 @@ interface Props {
 function ContactCard({ contact }: Props) {
   return (
     <>
-      <div className="col-span-1 element p-8 rounded-4xl flex flex-col gap-6">
+      <div className="col-span-4 sm:col-span-2 lg:col-span-1 element p-8 rounded-4xl flex flex-col gap-6">
         <div className="  flex justify-between items-center ">
           <Image
             className="w-20 h-20 rounded-3xl bg-blue-400"
