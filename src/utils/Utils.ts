@@ -15,14 +15,14 @@ type NavbarLink = {
 
 export const navbarLinks: NavbarLink[] = [
   { title: "خانه", link: "/", Icon: LuHouse },
-  { title: "ایمیل", link: "/", Icon: FaChartBar },
+  { title: "ایمیل", link: "/Email", Icon: FaChartBar },
   { title: "مخاطبین", link: "/Contact", Icon: FaRegUser },
   { title: "کریپتو", link: "/Currency", Icon: RiMoneyDollarCircleLine },
   { title: "صورتحساب", link: "/Bills", Icon: CiFileOn },
   { title: "حسابداری", link: "/Financial", Icon:CiWallet},
   { title: "مدیریت فایل", link: "/FileManager", Icon: GoFileDirectory },
-  { title: "تقویم", link: "/", Icon: CiCalendar },
-  { title: "تودو لیست", link: "/", Icon: LuPencil },
+  { title: "تقویم", link: "/Celender", Icon: CiCalendar },
+  { title: "تودو لیست", link: "/TodoList", Icon: LuPencil },
 ];
 
 
