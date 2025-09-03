@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import MainLayout from "@/layout/MainLayout";
+// import MainLayout from "@/layout/MainLayout";
 import ThemeInit from "@/layout/ThemeInit";
 
 
@@ -58,10 +58,10 @@ export default function RootLayout({
           ${peydaBold.variable}
           antialiased`}
       >
-        <MainLayout>
+        {/* <MainLayout> */}
           <ThemeInit />
           {children}
-        </MainLayout>
+        {/* </MainLayout> */}
       </body>
     </html>
   );

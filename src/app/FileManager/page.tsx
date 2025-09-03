@@ -1,12 +1,15 @@
 import Files from "@/components/template/FileManager/Files/Files";
 import StateCards from "@/components/template/FileManager/StateCards/StateCards";
+import MainLayout from "@/layout/MainLayout";
 import React from "react";
 
 function FileManager() {
   return (
     <div>
-      <StateCards />
-      <Files />
+      <MainLayout>
+        <StateCards />
+        <Files />
+      </MainLayout>
     </div>
   );
 }

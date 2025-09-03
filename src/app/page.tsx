@@ -7,47 +7,46 @@ import "./globals.css";
 import ColChart from "@/components/module/index1/ColChart/ColChart";
 import RecentProblems from "@/components/module/index1/RecentProblems/RecentProblems";
 import RecentActivitis from "@/components/module/global/RecentActivitis";
+import MainLayout from "@/layout/MainLayout";
 
 export default function Home() {
   return (
     <>
-        {/* محتوای اصلی که اسکرول می‌خوره */}
+      {/* محتوای اصلی که اسکرول می‌خوره */}
+      <MainLayout>
+        <div className="grid grid-cols-7 gap-10 mt-10  ">
+          <div className="col-span-5  max-xl:col-span-7">
+            <div className="flex flex-col w-full gap-10  ">
+              {/* stateCard */}
 
+              <StateCardContainer />
+              {/* end stateCard */}
 
-          <div className="grid grid-cols-7 gap-10 mt-10  ">
-            <div className="col-span-5  max-xl:col-span-7">
-              <div className="flex flex-col w-full gap-10  ">
-                {/* stateCard */}
+              {/* server request chart */}
+              <div className="w-full element  p-7 rounded-4xl ">
+                <ServerRequestChart
+                // chartData={[50, 80, 60, 90, 85, 100, 120]}
+                // chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
+                />
+              </div>
+              {/* end server request chart */}
 
-                <StateCardContainer />
-                {/* end stateCard */}
+              {/* meddiom Charts */}
+              <MedCharts />
+              {/* end meddiom Charts */}
 
-                {/* server request chart */}
-                <div className="w-full element  p-7 rounded-4xl ">
-                  <ServerRequestChart
-                    // chartData={[50, 80, 60, 90, 85, 100, 120]}
-                    // chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
-                  />
-                </div>
-                {/* end server request chart */}
-
-                {/* meddiom Charts */} 
-                <MedCharts />
-                {/* end meddiom Charts */}
-
-                {/* اینجا میخوام بزارمش  */}
-                <div className="">
-                  <Testimonial />
-                </div>
+              <div className="">
+                <Testimonial />
               </div>
             </div>
-            <div className="  col-span-2 max-xl:col-span-7 ">
-                <ColChart/>
-                <RecentProblems/>
-                <RecentActivitis/>
-            </div>
           </div>
-
+          <div className="  col-span-2 max-xl:col-span-7 ">
+            <ColChart />
+            <RecentProblems />
+            <RecentActivitis />
+          </div>
+        </div>
+      </MainLayout>
     </>
   );
 }
