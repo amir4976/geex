@@ -4,11 +4,14 @@ import MarketActivity from "@/components/module/Currency/MarketActivity";
 import CoreAssets from "@/components/template/Currency/CoreAssets/CoreAssets";
 import CurrenctCards from "@/components/template/Currency/CurrencyCards/CurrenctCards";
 import MarketPreviews from "@/components/template/Currency/MarketPreviews/MarketPreviews";
+import MainLayout from "@/layout/MainLayout";
 import React from "react";
 
 function page() {
   return (
     <div>
+       <MainLayout>
+
       <div className="grid grid-cols-7 ">
         <div className="col-span-5  p-10 max-lg:p-0 max-lg:col-span-7">
           <CurrenctCards />
@@ -30,6 +33,8 @@ function page() {
           <CurrencySummery/>
         </div>
       </div>
+          </MainLayout>
+
     </div>
   );
 }

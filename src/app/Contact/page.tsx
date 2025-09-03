@@ -1,12 +1,15 @@
-import ContactContainer from '@/components/template/Contact/ContactContainer'
-import React from 'react'
+import ContactContainer from "@/components/template/Contact/ContactContainer";
+import MainLayout from "@/layout/MainLayout";
+import React from "react";
 
 function page() {
   return (
     <div>
-      <ContactContainer/>
+      <MainLayout>
+        <ContactContainer />
+      </MainLayout>
     </div>
-  )
+  );
 }
 
-export default page
+export default page;

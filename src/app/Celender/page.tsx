@@ -1,12 +1,15 @@
-import InProgress from '@/components/module/global/InProgress'
-import React from 'react'
+import InProgress from "@/components/module/global/InProgress";
+import MainLayout from "@/layout/MainLayout";
+import React from "react";
 
 function page() {
   return (
     <div>
-      <InProgress/>
+      <MainLayout>
+        <InProgress />
+      </MainLayout>
     </div>
-  )
+  );
 }
 
-export default page
+export default page;
