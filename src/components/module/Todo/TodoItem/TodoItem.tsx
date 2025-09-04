@@ -38,7 +38,7 @@ function TodoItem({TodoItem}:props) {
 
   return (
     <div
-      className={`flex justify-between items-center element rounded-3xl p-10  `}
+      className={`flex justify-between items-center element rounded-3xl p-10 animatedTodo  `}
     >
       <div className="flex gap-3">
         <Checkbox setIsChecked={setIsChecked} />

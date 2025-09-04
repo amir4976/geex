@@ -20,10 +20,7 @@ function TodoList({ TodoListTest }:props) {
 
   return (
     <div className="w-full">
-      <div className="flex items-center text-3xl font-bold gap-3">
-        <InfoCircle size={30} variant="Bold" />
-        <p>لیست تودو: مهم</p>
-      </div>
+
       <div className="flex flex-col gap-5 mt-5">
         {paginatedData.map((item, index) => {
           return <TodoItem key={index} TodoItem={item} />;
