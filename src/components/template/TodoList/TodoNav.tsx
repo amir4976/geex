@@ -43,7 +43,7 @@ function TodoNav({
   }
 
   return (
-    <div className="w-[350px] element rounded-3xl min-h-[770px] max-h-[770px] border-gray-500/20 border py-4 px-5 ">
+    <div className="w-[350px] element rounded-3xl min-h-[770px] max-h-[770px] border-gray-500/20 border py-4 px-5 max-lg:hidden">
 
       {/* add a new todo also showing modal */}
       <button
