@@ -17,10 +17,10 @@ function page() {
           <CurrenctCards />
           <CoreAssets />
           <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 gap-10">
-            <div className="col-span-1 max-lg:col-span-2">
+            <div className="col-span-1 max-2xl:col-span-3">
               <MarketPreviews />
             </div>
-            <div className="col-span-2 ">
+            <div className="col-span-2 max-2xl:col-span-3 ">
               <MarketActivity
                 // chartData={[50, 80, 60, 90, 85, 100, 120]}
                 // chartDataSaccond={[50, 90, 20, 90, 85, 100, 120]}
@@ -28,7 +28,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="col-span-2   mt-10">
+        <div className="col-span-2   mt-10 max-lg:col-span-7">
           <CurrencyNewsUpdateWidget />
           <CurrencySummery/>
         </div>

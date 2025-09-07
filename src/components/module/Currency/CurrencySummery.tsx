@@ -29,9 +29,23 @@ function CurrencySummery() {
       bar: {
         dataLabels: {
           position: "top", // top, center, bottom
+          
         },
+        
       },
+       pie: {
+        donut: {
+          size: '55%'
+        }
+      }
+ 
     },
+            stroke:{
+         
+              curve: "smooth",
+            width: 1,
+            colors: ["rgba(204, 126, 120,0.5)"],
+        },
     responsive: [
       {
         breakpoint: 480,

@@ -7,6 +7,7 @@ import { GoFileDirectory } from "react-icons/go";
 import { CiCalendar } from "react-icons/ci";
 import { CiWallet } from "react-icons/ci";
 import { LuPencil } from "react-icons/lu";
+import { TbLayoutKanban } from "react-icons/tb";
 type NavbarLink = {
   title: string;
   link: string;
@@ -23,6 +24,8 @@ export const navbarLinks: NavbarLink[] = [
   { title: "مدیریت فایل", link: "/FileManager", Icon: GoFileDirectory },
   { title: "تقویم", link: "/Celender", Icon: CiCalendar },
   { title: "تودو لیست", link: "/TodoList", Icon: LuPencil },
+  { title: "کانبان برد", link: "/Kanban", Icon: TbLayoutKanban  },
+
 ];
 
 

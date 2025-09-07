@@ -10,18 +10,6 @@ const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 function CandelChart() {
   const [ShowCurrency, setShowCarrency] = useState("btc");
   const [data, setData] = useState(btc);
-  useEffect(() => {
-    const currency = () => {
-      fetch(
-        "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7"
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data.prices); // آرایه [timestamp, price]
-        });
-    };
-    currency();
-  }, []);
 
   const chengeCurrency = (e: string) => {
     setShowCarrency(e);
@@ -83,7 +71,7 @@ function CandelChart() {
         <div className="flex gap-3">
           <button
             className={` px-8 py-3   rounded-xl flex gap-5 ${
-              ShowCurrency == "btc" ? "bg-black/50" : ""
+              ShowCurrency == "btc" ? "bg-black text-white" : ""
             }`}
             onClick={() => chengeCurrency("btc")}
           >
@@ -92,7 +80,7 @@ function CandelChart() {
           </button>
           <button
             className={` px-8 py-3   rounded-xl flex gap-5 ${
-              ShowCurrency == "etr" ? "bg-black/50" : ""
+              ShowCurrency == "etr" ? "bg-black text-white" : ""
             }`}
             onClick={() => chengeCurrency("etr")}
           >
@@ -101,7 +89,7 @@ function CandelChart() {
           </button>
           <button
             className={` px-8 py-3   rounded-xl flex gap-5 ${
-              ShowCurrency == "ltc" ? "bg-black/50" : ""
+              ShowCurrency == "ltc" ? "bg-black text-white" : ""
             }`}
             onClick={() => chengeCurrency("ltc")}
           >
