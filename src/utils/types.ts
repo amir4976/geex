@@ -39,3 +39,12 @@ export type FilesDataType = {
     };
   };
 };
+
+
+export interface todosType  {
+      id:number,
+      todo:string,
+      tags:string[],
+      completed:boolean
+      createdAt:string
+}
