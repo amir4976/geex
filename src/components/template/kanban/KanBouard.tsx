@@ -5,7 +5,7 @@ import KanBanCard from "@/components/module/KanBan/KanBanCard";
 import Swal from "sweetalert2";
 import { AddSquare } from "iconsax-reactjs";
 
-type Task = { id: string; title: string };
+type Task = { id: string; title: string; createdAt: string; tag: string };
 type Column = { id: string; title: string; tasks: Task[] };
 
 const STORAGE_KEY = "kanban.columns.v1";
@@ -121,12 +121,23 @@ export default function KanbanBoard() {
     [moveTask]
   );
 
-  const addTask = useCallback((colId: string, title: string) => {
+  const addTask = useCallback((colId: string, title: string, tag:string) => {
     if (!title.trim()) return;
     setColumns((prev) =>
       prev.map((c) =>
         c.id === colId
-          ? { ...c, tasks: [...c.tasks, { id: uid("t"), title }] }
+          ? {
+              ...c,
+              tasks: [
+                ...c.tasks,
+                {
+                  id: uid("t"),
+                  title,
+                  createdAt: new Date().toISOString(),
+                  tag,
+                },
+              ],
+            }
           : c
       )
     );
@@ -141,14 +152,39 @@ export default function KanbanBoard() {
   const handleAddTask = async (colId: string) => {
     const { value } = await Swal.fire({
       title: "افزودن تسک جدید",
-      input: "text",
-      inputLabel: "عنوان تسک",
-      inputPlaceholder: "مثلاً: طراحی UI",
+      html: `
+    <input id="swal-input-title" class="swal2-input " placeholder="مثلاً: طراحی UI">
+    <select id="swal-input-tag" class="swal2-select">
+      <option value="" disabled selected>انتخاب تگ</option>
+      <option value="frontend">فرانت اند</option>
+      <option value="backend">بک اند</option>
+      <option value="ui/ux">رابط کاربری</option>
+      <option value="rigting">کپی رایتینگ</option>
+      <option value="debug">رفع اشکال</option>
+    </select>
+  `,
+      focusConfirm: false,
       showCancelButton: true,
       confirmButtonText: "افزودن",
       cancelButtonText: "لغو",
+      preConfirm: () => {
+        const title = (
+          document.getElementById("swal-input-title") as HTMLInputElement
+        ).value;
+        const tag = (
+          document.getElementById("swal-input-tag") as HTMLSelectElement
+        ).value;
+        if (!title || !tag) {
+          Swal.showValidationMessage("لطفاً هر دو فیلد را پر کنید");
+          return;
+        }
+        return { title, tag };
+      },
     });
-    if (value) addTask(colId, value);
+
+    if (value) {
+      addTask(colId, value.title, value.tag);
+    }
   };
 
   const handleAddColumn = async () => {
@@ -197,7 +233,11 @@ export default function KanbanBoard() {
                   onDragOver={(e) => e.preventDefault()}
                   onDrop={(e) => handleDropOnTask(e, col.id, task.id)}
                 >
-                  <KanBanCard />
+                  <KanBanCard
+                    title={task.title}
+                    createdAt={task.createdAt}
+                    tag={task.tag}
+                  />
                 </div>
               ))}
             </div>
